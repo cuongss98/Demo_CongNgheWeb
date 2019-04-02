@@ -1,0 +1,863 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!--start:body-->
+<section class="dq-stt-1 slider-section">
+    <div class="section section-category">
+        <div class="owl-slider-home owl-carousel owl-theme">
+            <div class="carousel-item">
+                <a href="./">
+                    <img src="data/upload/slide-may-scan-fujitsu.jpg" alt="banner quang cao 001" />
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+@{
+    ViewBag.Title = "Test";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section class="page-content">
+    <div class="container">
+        <div class="row">
+            <section class="right-content col-lg-9 col-md-9  col-sm-12  col-xs-12 collection float-right no-padding-right">
+                <div class="toolbar">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="header_search">
+                                <form id="myForm" class="input-group search-bar" action="tim-kiem/" method="POST" required="" role="search">
+                                    <div class="collection-selector">
+                                        <select name="cmbTimKiem" class="search-select">
+                                            <option value="">Bộ Lọc</option>
+                                            <option value="all">Tất cả</option>
+
+                                            <option value="1">Laptop Asus</option>
+
+                                            <option value="6">Laptop Dell</option>
+
+                                            <option value="5">Laptop HP </option>
+
+                                            <option value="10">Laptop HP </option>
+
+                                            <option value="4">Laptop HP  </option>
+                                        </select>
+                                    </div>
+                                    <input type="text" name="txtSearch" value="" placeholder="Tìm kiếm sản phẩm... " class="input-group-field st-default-search-input search-text" autocomplete="off" />
+                                    <span class="input-group-btn">
+                                        <button onclick="timKiem();" class="btn icon-fallback-text">
+                                            <i class="fa fa-search" aria-hidden="true"></i>
+                                        </button>
+                                    </span>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container_tabs product-tabs">
+                    <ul class="tabs">
+                        <li class="tab-link current" data-tab="tab-1">Sản phẩm mới</li>
+                        <li class="tab-link" data-tab="tab-2">Sản phẩm hot</li>
+                        <li class="tab-link" data-tab="tab-3">Sản phẩm khuyến mãi</li>
+                        <div class="clear"></div>
+                    </ul>
+                    <!-- NEW -->
+                    <div id="tab-1" class="tab-content current">
+
+                        <div class="module-product">
+
+                            <div class="category-products">
+                                <section class="products-view products-view-grid">
+                                    <div class="row">
+
+                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
+                                            <div class="product-box">
+                                                <div class="product-thumbnail">
+                                                    <div class="sale-flash ">
+                                                        <b>-</b>
+                                                        8 %
+                                                    </div>
+                                                    <div class="new"> new</div>
+
+                                                    <a href="chitiet.html" title="Laptop Asus">
+                                                        <img src="~/img/laptop01.jpg">
+                                                    </a>
+
+                                                    <div class="variants pro-action-btn form-nut-grid">
+                                                        <div>
+                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
+                                                                Đặt hàng
+                                                            </a>
+                                                            <a href="chitiet.html" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="product-info">
+                                                    <h3 class="product-name">Laptop Asus</h3>
+                                                    <div class="product-price">13,500,000₫</div>
+                                                    <div class="product-price-old">
+                                                        14,750,000₫
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
+                                            <div class="product-box">
+                                                <div class="product-thumbnail">
+                                                    <div class="sale-flash ">
+                                                        <b>-</b>
+                                                        8 %
+                                                    </div>
+                                                    <div class="new"> new</div>
+
+                                                    <a href="chitiet.html" title="Laptop Asus">
+                                                        <img src="~/img/laptop01.jpg">
+                                                    </a>
+
+                                                    <div class="variants pro-action-btn form-nut-grid">
+                                                        <div>
+                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
+                                                                Đặt hàng
+                                                            </a>
+                                                            <a href="chitiet.html" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="product-info">
+                                                    <h3 class="product-name">Laptop Asus</h3>
+                                                    <div class="product-price">13,500,000₫</div>
+                                                    <div class="product-price-old">
+                                                        14,750,000₫
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
+                                            <div class="product-box">
+                                                <div class="product-thumbnail">
+                                                    <div class="sale-flash ">
+                                                        <b>-</b>
+                                                        8 %
+                                                    </div>
+                                                    <div class="new"> new</div>
+
+                                                    <a href="chitiet.html" title="Laptop Asus">
+                                                        <img src="~/img/laptop01.jpg">
+                                                    </a>
+
+                                                    <div class="variants pro-action-btn form-nut-grid">
+                                                        <div>
+                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
+                                                                Đặt hàng
+                                                            </a>
+                                                            <a href="chitiet.html" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-info">
+                                                    <h3 class="product-name">Laptop Asus</h3>
+                                                    <div class="product-price">13,500,000₫</div>
+                                                    <div class="product-price-old">
+                                                        14,750,000₫
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
+                                            <div class="product-box">
+                                                <div class="product-thumbnail">
+                                                    <div class="sale-flash ">
+                                                        <b>-</b>
+                                                        8 %
+                                                    </div>
+                                                    <div class="new"> new</div>
+
+                                                    <a href="chitiet.html" title="Laptop Asus">
+                                                        <img src="~/img/laptop01.jpg">
+                                                    </a>
+
+                                                    <div class="variants pro-action-btn form-nut-grid">
+                                                        <div>
+                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
+                                                                Đặt hàng
+                                                            </a>
+                                                            <a href="chitiet.html" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-info">
+                                                    <h3 class="product-name">Laptop Asus</h3>
+                                                    <div class="product-price">13,500,000₫</div>
+                                                    <div class="product-price-old">
+                                                        14,750,000₫
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
+                                            <div class="product-box">
+                                                <div class="product-thumbnail">
+                                                    <div class="sale-flash ">
+                                                        <b>-</b>
+                                                        8 %
+                                                    </div>
+                                                    <div class="new"> new</div>
+
+                                                    <a href="chitiet.html" title="Laptop Asus">
+                                                        <img src="~/img/laptop01.jpg">
+                                                    </a>
+
+                                                    <div class="variants pro-action-btn form-nut-grid">
+                                                        <div>
+                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
+                                                                Đặt hàng
+                                                            </a>
+                                                            <a href="chitiet.html" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-info">
+                                                    <h3 class="product-name">Laptop Asus</h3>
+                                                    <div class="product-price">13,500,000₫</div>
+                                                    <div class="product-price-old">
+                                                        14,750,000₫
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
+                                            <div class="product-box">
+                                                <div class="product-thumbnail">
+                                                    <div class="sale-flash ">
+                                                        <b>-</b>
+                                                        8 %
+                                                    </div>
+                                                    <div class="new"> new</div>
+
+                                                    <a href="chitiet.html" title="Laptop Asus">
+                                                        <img src="~/img/laptop01.jpg">
+                                                    </a>
+
+                                                    <div class="variants pro-action-btn form-nut-grid">
+                                                        <div>
+                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
+                                                                Đặt hàng
+                                                            </a>
+                                                            <a href="chitiet.html" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-info">
+                                                    <h3 class="product-name">Laptop Asus</h3>
+                                                    <div class="product-price">13,500,000₫</div>
+                                                    <div class="product-price-old">
+                                                        14,750,000₫
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
+                                            <div class="product-box">
+                                                <div class="product-thumbnail">
+                                                    <div class="sale-flash ">
+                                                        <b>-</b>
+                                                        8 %
+                                                    </div>
+                                                    <div class="new"> new</div>
+
+                                                    <a href="chitiet.html" title="Laptop Asus">
+                                                        <img src="~/img/laptop01.jpg">
+                                                    </a>
+
+                                                    <div class="variants pro-action-btn form-nut-grid">
+                                                        <div>
+                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
+                                                                Đặt hàng
+                                                            </a>
+                                                            <a href="chitiet.html" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-info">
+                                                    <h3 class="product-name">Laptop Asus</h3>
+                                                    <div class="product-price">13,500,000₫</div>
+                                                    <div class="product-price-old">
+                                                        14,750,000₫
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
+                                            <div class="product-box">
+                                                <div class="product-thumbnail">
+                                                    <div class="sale-flash ">
+                                                        <b>-</b>
+                                                        8 %
+                                                    </div>
+                                                    <div class="new"> new</div>
+
+                                                    <a href="chitiet.html" title="Laptop Asus">
+                                                        <img src="~/img/laptop01.jpg">
+                                                    </a>
+
+                                                    <div class="variants pro-action-btn form-nut-grid">
+                                                        <div>
+                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
+                                                                Đặt hàng
+                                                            </a>
+                                                            <a href="chitiet.html" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-info">
+                                                    <h3 class="product-name">Laptop Asus</h3>
+                                                    <div class="product-price">13,500,000₫</div>
+                                                    <div class="product-price-old">
+                                                        14,750,000₫
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
+                                            <div class="product-box">
+                                                <div class="product-thumbnail">
+                                                    <div class="sale-flash ">
+                                                        <b>-</b>
+                                                        8 %
+                                                    </div>
+                                                    <div class="new"> new</div>
+
+                                                    <a href="chitiet.html" title="Laptop Asus">
+                                                        <img src="~/img/laptop01.jpg">
+                                                    </a>
+
+                                                    <div class="variants pro-action-btn form-nut-grid">
+                                                        <div>
+                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
+                                                                Đặt hàng
+                                                            </a>
+                                                            <a href="chitiet.html" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-info">
+                                                    <h3 class="product-name">Laptop Asus</h3>
+                                                    <div class="product-price">13,500,000₫</div>
+                                                    <div class="product-price-old">
+                                                        14,750,000₫
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </section>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end NEW -->
+                    <!-- HOT -->
+                    <div id="tab-2" class="tab-content current">
+
+                        <div class="module-product">
+
+                            <div class="category-products">
+                                <section class="products-view products-view-grid">
+                                    <div class="row">
+
+                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
+                                            <div class="product-box">
+                                                <div class="product-thumbnail">
+                                                    <div class="sale-flash ">
+                                                        <b>-</b>
+                                                        8 %
+                                                    </div>
+                                                    <div class="new"> new</div>
+
+                                                    <a href="chitiet.html" title="Laptop Asus">
+                                                        <img src="~/img/laptop01.jpg">
+                                                    </a>
+
+                                                    <div class="variants pro-action-btn form-nut-grid">
+                                                        <div>
+                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
+                                                                Đặt hàng
+                                                            </a>
+                                                            <a href="chitiet.html" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="product-info">
+                                                    <h3 class="product-name">Laptop Asus</h3>
+                                                    <div class="product-price">13,500,000₫</div>
+                                                    <div class="product-price-old">
+                                                        14,750,000₫
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
+                                            <div class="product-box">
+                                                <div class="product-thumbnail">
+                                                    <div class="sale-flash ">
+                                                        <b>-</b>
+                                                        8 %
+                                                    </div>
+                                                    <div class="new"> new</div>
+
+                                                    <a href="chitiet.html" title="Laptop Asus">
+                                                        <img src="~/img/laptop01.jpg">
+                                                    </a>
+
+                                                    <div class="variants pro-action-btn form-nut-grid">
+                                                        <div>
+                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
+                                                                Đặt hàng
+                                                            </a>
+                                                            <a href="chitiet.html" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="product-info">
+                                                    <h3 class="product-name">Laptop Asus</h3>
+                                                    <div class="product-price">13,500,000₫</div>
+                                                    <div class="product-price-old">
+                                                        14,750,000₫
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
+                                            <div class="product-box">
+                                                <div class="product-thumbnail">
+                                                    <div class="sale-flash ">
+                                                        <b>-</b>
+                                                        8 %
+                                                    </div>
+                                                    <div class="new"> new</div>
+
+                                                    <a href="chitiet.html" title="Laptop Asus">
+                                                        <img src="~/img/laptop01.jpg">
+                                                    </a>
+
+                                                    <div class="variants pro-action-btn form-nut-grid">
+                                                        <div>
+                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
+                                                                Đặt hàng
+                                                            </a>
+                                                            <a href="chitiet.html" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-info">
+                                                    <h3 class="product-name">Laptop Asus</h3>
+                                                    <div class="product-price">13,500,000₫</div>
+                                                    <div class="product-price-old">
+                                                        14,750,000₫
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
+                                            <div class="product-box">
+                                                <div class="product-thumbnail">
+                                                    <div class="sale-flash ">
+                                                        <b>-</b>
+                                                        8 %
+                                                    </div>
+                                                    <div class="new"> new</div>
+
+                                                    <a href="chitiet.html" title="Laptop Asus">
+                                                        <img src="~/img/laptop01.jpg">
+                                                    </a>
+
+                                                    <div class="variants pro-action-btn form-nut-grid">
+                                                        <div>
+                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
+                                                                Đặt hàng
+                                                            </a>
+                                                            <a href="chitiet.html" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-info">
+                                                    <h3 class="product-name">Laptop Asus</h3>
+                                                    <div class="product-price">13,500,000₫</div>
+                                                    <div class="product-price-old">
+                                                        14,750,000₫
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
+                                            <div class="product-box">
+                                                <div class="product-thumbnail">
+                                                    <div class="sale-flash ">
+                                                        <b>-</b>
+                                                        8 %
+                                                    </div>
+                                                    <div class="new"> new</div>
+
+                                                    <a href="chitiet.html" title="Laptop Asus">
+                                                        <img src="~/img/laptop01.jpg">
+                                                    </a>
+
+                                                    <div class="variants pro-action-btn form-nut-grid">
+                                                        <div>
+                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
+                                                                Đặt hàng
+                                                            </a>
+                                                            <a href="chitiet.html" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-info">
+                                                    <h3 class="product-name">Laptop Asus</h3>
+                                                    <div class="product-price">13,500,000₫</div>
+                                                    <div class="product-price-old">
+                                                        14,750,000₫
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
+                                            <div class="product-box">
+                                                <div class="product-thumbnail">
+                                                    <div class="sale-flash ">
+                                                        <b>-</b>
+                                                        8 %
+                                                    </div>
+                                                    <div class="new"> new</div>
+
+                                                    <a href="chitiet.html" title="Laptop Asus">
+                                                        <img src="~/img/laptop01.jpg">
+                                                    </a>
+
+                                                    <div class="variants pro-action-btn form-nut-grid">
+                                                        <div>
+                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
+                                                                Đặt hàng
+                                                            </a>
+                                                            <a href="chitiet.html" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-info">
+                                                    <h3 class="product-name">Laptop Asus</h3>
+                                                    <div class="product-price">13,500,000₫</div>
+                                                    <div class="product-price-old">
+                                                        14,750,000₫
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
+                                            <div class="product-box">
+                                                <div class="product-thumbnail">
+                                                    <div class="sale-flash ">
+                                                        <b>-</b>
+                                                        8 %
+                                                    </div>
+                                                    <div class="new"> new</div>
+
+                                                    <a href="chitiet.html" title="Laptop Asus">
+                                                        <img src="~/img/laptop01.jpg">
+                                                    </a>
+
+                                                    <div class="variants pro-action-btn form-nut-grid">
+                                                        <div>
+                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
+                                                                Đặt hàng
+                                                            </a>
+                                                            <a href="chitiet.html" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-info">
+                                                    <h3 class="product-name">Laptop Asus</h3>
+                                                    <div class="product-price">13,500,000₫</div>
+                                                    <div class="product-price-old">
+                                                        14,750,000₫
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
+                                            <div class="product-box">
+                                                <div class="product-thumbnail">
+                                                    <div class="sale-flash ">
+                                                        <b>-</b>
+                                                        8 %
+                                                    </div>
+                                                    <div class="new"> new</div>
+
+                                                    <a href="chitiet.html" title="Laptop Asus">
+                                                        <img src="~/img/laptop01.jpg">
+                                                    </a>
+
+                                                    <div class="variants pro-action-btn form-nut-grid">
+                                                        <div>
+                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
+                                                                Đặt hàng
+                                                            </a>
+                                                            <a href="chitiet.html" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-info">
+                                                    <h3 class="product-name">Laptop Asus</h3>
+                                                    <div class="product-price">13,500,000₫</div>
+                                                    <div class="product-price-old">
+                                                        14,750,000₫
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
+                                            <div class="product-box">
+                                                <div class="product-thumbnail">
+                                                    <div class="sale-flash ">
+                                                        <b>-</b>
+                                                        8 %
+                                                    </div>
+                                                    <div class="new"> new</div>
+
+                                                    <a href="chitiet.html" title="Laptop Asus">
+                                                        <img src="~/img/laptop01.jpg">
+                                                    </a>
+
+                                                    <div class="variants pro-action-btn form-nut-grid">
+                                                        <div>
+                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
+                                                                Đặt hàng
+                                                            </a>
+                                                            <a href="chitiet.html" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-info">
+                                                    <h3 class="product-name">Laptop Asus</h3>
+                                                    <div class="product-price">13,500,000₫</div>
+                                                    <div class="product-price-old">
+                                                        14,750,000₫
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </section>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end HOT -->
+                    <!-- SALE -->
+                    <!-- Enh SALE-->
+                </div>
+
+                <!-- end san pham cung loai -->
+            </section>
+            <!-- danh muc san pham -->
+            <section class="sidebar left-content col-lg-3 col-md-3 col-sm-12 col-xs-12 float-left no-padding-left">
+                <div class="aside-right">
+                    <div class="aside hidden-sm hidden-xs">
+                        <!-- danh muc -->
+                        <div class="aside aside-mini-products-list">
+                            <div class="aside-title">
+                                <h3>Danh mục sản phẩm </h3>
+                            </div>
+                            <div class="aside-content mini-products-list">
+                                <div class='cssmenu-flyout'>
+                                    <ul>
+
+                                        <li>
+                                            <a href=""><span>Laptop Dell </span></a>
+                                            <div class="menu-sub-fly">
+
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a href=""><span>Laptop Dell </span></a>
+                                            <div class="menu-sub-fly">
+
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a href=""><span>Laptop Dell </span></a>
+                                            <div class="menu-sub-fly">
+
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a href=""><span>Laptop Dell </span></a>
+                                            <div class="menu-sub-fly">
+
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a href=""><span>Laptop Dell </span></a>
+                                            <div class="menu-sub-fly">
+
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a href=""><span>Laptop Dell </span></a>
+                                            <div class="menu-sub-fly">
+
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a href=""><span>Laptop Dell </span></a>
+                                            <div class="menu-sub-fly">
+
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a href=""><span>Laptop Dell </span></a>
+                                            <div class="menu-sub-fly">
+
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end danh muc -->
+                    </div>
+                    <div class="aside hidden-sm hidden-xs">
+                        <!-- danh muc -->
+                        <div class="aside aside-mini-products-list">
+                            <div class="aside-title">
+                                <h3>Các loại laptop</h3>
+                            </div>
+                            <div class="aside-content mini-products-list">
+                                <div class='cssmenu-flyout'>
+                                    <ul>
+
+                                        <li>
+                                            <a href="san-pham/scan-tai-lieu-chuyen-dung-p93.html"><span>Laptop Gaming </span></a>
+                                            <div class="menu-sub-fly">
+
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a href="san-pham/may-scan-a4-p36.html"><span>Laptop van phong </span></a>
+                                            <div class="menu-sub-fly">
+
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a href="san-pham/may-scan-ho-chieu-p30.html"><span>Laptop doanh nhan </span></a>
+                                            <div class="menu-sub-fly">
+
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a href="san-pham/may-scan-chim-p29.html"><span>Laptop lam viec </span></a>
+                                            <div class="menu-sub-fly">
+
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end danh muc -->
+                    </div>
+                    <!-- danh sach tin tuc -->
+            </section>
+        </div>
+    </div>
+</section>
+
+<section class="section section-brand">
+    <div class="container">
+        <!-- Slide -->
+        <div class="slider-brand owl-carousel">
+
+            <div class="brand-item">
+                <a href="#">
+                    <img src="~/data/upload/brand_6.png" alt="Logo 006">
+                </a>
+            </div>
+
+            <div class="brand-item">
+                <a href="#">
+                    <img src="~/data/upload/brand_5.png" alt="Logo 005">
+                </a>
+            </div>
+
+            <div class="brand-item">
+                <a href="#">
+                    <img src="~/data/upload/brand_4.png" alt="Logo 004">
+                </a>
+            </div>
+
+            <div class="brand-item">
+                <a href="#">
+                    <img src="data/upload/brand_3.png" alt="Logo 003">
+                </a>
+            </div>
+
+            <div class="brand-item">
+                <a href="#">
+                    <img src="~/data/upload/brand_2.png" alt="Logo 002">
+                </a>
+            </div>
+
+            <div class="brand-item">
+                <a href="#">
+                    <img src="~/data/upload/brand_1.png" alt="Logo 001">
+                </a>
+            </div>
+
+        </div>
+        <!-- Slide -->
+    </div>
+</section>
+<!--end:body-->
