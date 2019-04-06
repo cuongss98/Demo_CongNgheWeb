@@ -274,6 +274,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\LienHe.cshtml" />
     <Content Include="Views\Home\ChiTietSanPham.cshtml" />
+    <Content Include="Views\Home\DatHang.cshtml" />
+    <Content Include="Views\Home\ThanhToan.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

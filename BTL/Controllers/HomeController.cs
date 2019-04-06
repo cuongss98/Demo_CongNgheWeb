@@ -20,5 +20,13 @@ namespace BTL.Controllers
         {
             return View();
         }
+        public ActionResult DatHang()
+        {
+            return View();
+        }
+        public ActionResult ThanhToan()
+        {
+            return View();
+        }
     }
 }
