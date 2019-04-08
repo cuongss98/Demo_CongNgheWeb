@@ -215,7 +215,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="img\icon.jpg" />
+    <Content Include="img\cover.png" />
     <Content Include="img\laptop-blue.jpg" />
     <Content Include="img\laptop01.jpg" />
     <Content Include="Scripts\bootstrap.js" />
@@ -255,11 +255,11 @@
     <Content Include="template\Default\img\p_policy_3.png" />
     <Content Include="template\Default\img\p_policy_4.png" />
     <Content Include="template\Default\img\p_policy_5.png" />
+    <Content Include="template\Default\img\search.png" />
     <Content Include="template\Default\img\shopping-cart-128.png" />
     <Content Include="template\Default\js\bootstrap.min.js" />
-    <Content Include="template\Default\js\cloudzoom.js" />
     <Content Include="template\Default\js\jquery-2.2.3.min.js" />
-    <Content Include="template\Default\js\jquery.fancybox.js" />
+    <Content Include="template\Default\js\jquery-3.3.1.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
