@@ -10,10 +10,10 @@
             <div class="col-xs-12 col-sm-12 col-md-12 no-padding">
                 <ul class="breadcrumbs">
                     <li class="home">
-                        <a itemprop="url" itemprop="title" href="http://localhost:59579/Home">Trang chủ</a>
+                        <a href="@Url.Action("Index", "Home")">Trang chủ</a>
                         <span> / </span>
                     </li>
-                    <li><strong itemprop="title">Thanh toán</strong></li>
+                    <li><strong>Thanh toán</strong></li>
                 </ul>
             </div>
         </div>
@@ -50,7 +50,7 @@
                                         </td>
                                         <td data-th="Sản phẩm">
                                             <div class="col_table_name">
-                                                <a href="chitiet.html"><h4 class="nomargin">Laptop Asus S1300i</a></h4>
+                                                <a href="@Url.Action("ChiTietSanPham", "Home")"><h4 class="nomargin">Laptop Asus S1300i</a></h4>
                                             </div>
                                         </td>
                                         <td data-th="Mã sản phẩm">
@@ -72,7 +72,7 @@
                                         </td>
                                         <td data-th="Sản phẩm">
                                             <div class="col_table_name">
-                                                <a href="chitiet.html"><h4 class="nomargin">Laptop Asus S1300i</a></h4>
+                                                <a href="@Url.Action("ChiTietSanPham", "Home")"><h4 class="nomargin">Laptop Asus S1300i</a></h4>
                                             </div>
                                         </td>
                                         <td data-th="Mã sản phẩm">
@@ -94,7 +94,7 @@
                                         </td>
                                         <td data-th="Sản phẩm">
                                             <div class="col_table_name">
-                                                <a href="chitiet.html"><h4 class="nomargin">Laptop Asus S1300i</a></h4>
+                                                <a href="@Url.Action("ChiTietSanPham", "Home")"><h4 class="nomargin">Laptop Asus S1300i</a></h4>
                                             </div>
                                         </td>
                                         <td data-th="Mã sản phẩm">
@@ -116,7 +116,7 @@
                                         </td>
                                         <td data-th="Sản phẩm">
                                             <div class="col_table_name">
-                                                <a href="chitiet.html"><h4 class="nomargin">Laptop Asus S1300i</a></h4>
+                                                <a href="@Url.Action("ChiTietSanPham", "Home")"><h4 class="nomargin">Laptop Asus S1300i</a></h4>
                                             </div>
                                         </td>
                                         <td data-th="Mã sản phẩm">
@@ -194,7 +194,7 @@
                     <div class="col-lg-12 col-md-12">
                         <div class="pull-xs-left" style="margin-top:10px;margin-bottom: 20px;">
                             <button tyle="summit" class="btn btn-lg btn-style btn-style-active">Đặt hàng</button>
-                            <a class="btn btn-lg btn-style btn-style-active btn-dark" href="http://localhost:59579/" role="button">Hủy đơn hàng</a>
+                            <a class="btn btn-lg btn-style btn-style-active btn-dark" href="@Url.Action("Index", "Home")" role="button">Hủy đơn hàng</a>
                         </div>
                     </div>
                 </div>
