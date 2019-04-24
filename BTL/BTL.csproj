@@ -45,6 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.EntityFrameworkCore, Version=2.2.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.EntityFrameworkCore.2.2.3\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
@@ -125,6 +131,8 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.1\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -199,13 +207,34 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SanPhamController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\BTLContext.cs" />
+    <Compile Include="Models\ChiTietNhapKho.cs" />
+    <Compile Include="Models\ChiTietXuatKho.cs" />
+    <Compile Include="Models\CongnghewebContext.cs" />
+    <Compile Include="Models\DanhMuc.cs" />
+    <Compile Include="Models\KhuyenMai.cs" />
+    <Compile Include="Models\NhapKho.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\SanPham.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\XuatKho.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Admin\Asset\all.min.css" />
+    <Content Include="Areas\Admin\Asset\bootstrap.bundle.min.js" />
+    <Content Include="Areas\Admin\Asset\jquery.easing.min.js" />
+    <Content Include="Areas\Admin\Asset\jquery.min.js" />
+    <Content Include="Areas\Admin\Asset\sb-admin-2.min.css" />
+    <Content Include="Areas\Admin\Asset\sb-admin-2.min.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -215,11 +244,35 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="img\icon.jpg" />
+    <Content Include="img\acer_1.jpg" />
+    <Content Include="img\acer_2.jpg" />
+    <Content Include="img\acer_3.jpg" />
+    <Content Include="img\acer_4.jpg" />
+    <Content Include="img\asus_4.jpg" />
+    <Content Include="img\asus_1.jpg" />
+    <Content Include="img\asus_2.jpg" />
+    <Content Include="img\asus_3.jpg" />
+    <Content Include="img\cover.png" />
+    <Content Include="img\dell_1.jpg" />
+    <Content Include="img\dell_2.jpg" />
+    <Content Include="img\dell_3.jpg" />
+    <Content Include="img\dell_4.jpg" />
+    <Content Include="img\hp_2.jpg" />
+    <Content Include="img\hp_3.jpg" />
+    <Content Include="img\hp_4.jpg" />
+    <Content Include="img\hp_1.jpg" />
     <Content Include="img\laptop-blue.jpg" />
     <Content Include="img\laptop01.jpg" />
+    <Content Include="img\lenovo_4.jpg" />
+    <Content Include="img\lenovo_1.jpg" />
+    <Content Include="img\lenovo_2.jpg" />
+    <Content Include="img\lenovo_3.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="efpt.config.json" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Default\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Default\Login.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -232,14 +285,11 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="template\Default\css\bootstrap.min.css" />
-    <Content Include="template\Default\css\cloudzoom.css" />
     <Content Include="template\Default\css\custom-dqdt.css" />
-    <Content Include="template\Default\css\ecentre.css" />
     <Content Include="template\Default\css\font-awesome.min.css" />
     <Content Include="template\Default\css\jquery.fancybox.css" />
     <Content Include="template\Default\css\module.css" />
     <Content Include="template\Default\css\owl.carousel.css" />
-    <Content Include="template\Default\css\owl.theme.default.min.css" />
     <Content Include="template\Default\css\responsive.css" />
     <Content Include="template\Default\css\sidebar.css" />
     <Content Include="template\Default\css\style.css" />
@@ -255,11 +305,11 @@
     <Content Include="template\Default\img\p_policy_3.png" />
     <Content Include="template\Default\img\p_policy_4.png" />
     <Content Include="template\Default\img\p_policy_5.png" />
+    <Content Include="template\Default\img\search.png" />
     <Content Include="template\Default\img\shopping-cart-128.png" />
     <Content Include="template\Default\js\bootstrap.min.js" />
-    <Content Include="template\Default\js\cloudzoom.js" />
     <Content Include="template\Default\js\jquery-2.2.3.min.js" />
-    <Content Include="template\Default\js\jquery.fancybox.js" />
+    <Content Include="template\Default\js\jquery-3.3.1.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -274,10 +324,15 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\LienHe.cshtml" />
     <Content Include="Views\Home\ChiTietSanPham.cshtml" />
+    <Content Include="Views\Home\DatHang.cshtml" />
+    <Content Include="Views\Home\ThanhToan.cshtml" />
+    <Content Include="Views\Shared\Sidebar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Views\SanPham\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -291,6 +346,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
