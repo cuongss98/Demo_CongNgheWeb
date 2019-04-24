@@ -1,10 +1,10 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
+@using BTL.Models
 <!--start:body-->
 
-<div class="container"  style="padding-bottom:10px;padding-top:10px;">
+<div class="container" style="padding-bottom:10px;padding-top:10px;">
     <div id="myCarousel" class="carousel slide" data-ride="carousel" styte="width:600px; height:110px; ">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -15,9 +15,8 @@
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" style="width:80%; height:200px; margin-left:auto; margin-right:auto;">
-
-            <div class="item active">
-                <img src="~/img/cover.png" alt="Los Angeles"  >
+                <div class="item active">
+                <img src="~/img/cover.png" alt="Los Angeles">
                 <div class="carousel-caption">
                     <h3></h3>
                     <p></p>
@@ -25,13 +24,13 @@
             </div>
 
             <div class="item">
-                <img src="~/img/cover.png" alt="Chicago" >
+                <img src="~/img/cover.png" alt="Chicago">
                 <div class="carousel-caption">
                 </div>
             </div>
 
             <div class="item">
-                <img src="~/img/cover.png" alt="New York" >
+                <img src="~/img/cover.png" alt="New York">
                 <div class="carousel-caption">
                 </div>
             </div>
@@ -64,24 +63,15 @@
                                 <form id="myForm" class="input-group search-bar" action="tim-kiem/" method="POST" required="" role="search">
                                     <div class="collection-selector">
                                         <select name="cmbTimKiem" class="search-select">
-                                            <option value="">Bộ Lọc</option>
-                                            <option value="all">Tất cả</option>
-
-                                            <option value="1">Laptop Asus</option>
-
-                                            <option value="6">Laptop Dell</option>
-
-                                            <option value="5">Laptop HP </option>
-
-                                            <option value="10">Laptop HP </option>
-
-                                            <option value="4">Laptop HP  </option>
+                                            <option value="">Tất cả</option>
                                         </select>
                                     </div>
                                     <input type="text" name="" value="" placeholder="Tìm kiếm sản phẩm... " class="input-group-field st-default-search-input search-text" autocomplete="off" />
                                     <span class="input-group-btn">
                                         <button onclick="timKiem();" class="btn"
-                                                style="background:black;font-size:13px;color:antiquewhite;"> Search </button>
+                                                style="background:black;font-size:13px;color:antiquewhite;">
+                                            Search
+                                        </button>
                                     </span>
 
                                 </form>
@@ -91,8 +81,7 @@
                 </div>
                 <div class="container_tabs product-tabs">
                     <ul class="tabs">
-                        <li class="tab-link current" data-tab="tab-1">Sản phẩm mới</li>                
-                        <li class="tab-link" data-tab="tab-2">Sản phẩm khuyến mãi</li>
+                        <li class="tab-link current">Danh sách sản phẩm </li>
                         <div class="clear"></div>
                     </ul>
                     <!-- NEW -->
@@ -103,141 +92,37 @@
                             <div class="category-products">
                                 <section class="products-view products-view-grid">
                                     <div class="row">
-
-                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-                                                    <a href="@Url.Action("ChiTietSanPham", "Home")" title="Laptop Asus">
-                                                        <img src="~/img/laptop01.jpg">
-                                                    </a>
-                                                    <div class="variants pro-action-btn form-nut-grid">
-                                                        <div>
-                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
-                                                                Mua Ngay
-                                                            </a>
-                                                            <a href="@Url.Action("ChiTietSanPham", "Home")" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
+                                        @foreach (SanPham x in Model)
+                                        {
+                                            <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
+                                                <div class="product-box">
+                                                    <div class="product-thumbnail">
+                                                        <a href="@Url.Action("ChiTietSanPham", "Home", new {id = x.SanPhamId })" title="Laptop">
+                                                            <img src="@Url.Content(x.HinhAnh)"  style="width:200px;height:200px;">
+                                                        </a>
+                                                        <div class="variants pro-action-btn form-nut-grid">
+                                                            <div>
+                                                                <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
+                                                                    Mua Ngay
+                                                                </a>
+                                                                <a href="@Url.Action("ChiTietSanPham", "Home", new {id = x.SanPhamId })" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
 
-                                                <div class="product-info">
-                                                    <h3 class="product-name">Laptop Asus</h3>
-                                                    <div class="product-price text-center" style="display:block;">13,500,000₫</div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-                                                    <a href="@Url.Action("ChiTietSanPham", "Home")" title="Laptop Asus">
-                                                        <img src="~/img/laptop01.jpg">
-                                                    </a>
-                                                    <div class="variants pro-action-btn form-nut-grid">
-                                                        <div>
-                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
-                                                                Mua Ngay
-                                                            </a>
-                                                            <a href="@Url.Action("ChiTietSanPham", "Home")" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
-                                                        </div>
+                                                    <div class="product-info">
+                                                        <h3 class="product-name">@x.TenSanPham</h3>
+                                                        <div class="product-price text-center" style="display:block;" id="price01">@x.Giá ₫</div>
+                                                        @if (x.KhuyenMaiId != null)
+                                                        {
+                                                            <div class="product-price-old" style="text-align:center; display:block;">
+                                                                14,750,000₫
+                                                            </div>
+                                                        }
                                                     </div>
                                                 </div>
-
-                                                <div class="product-info">
-                                                    <h3 class="product-name">Laptop Asus</h3>
-                                                    <div class="product-price text-center" style="display:block;">13,500,000₫</div>
-                                                </div>
                                             </div>
-                                        </div>
-
-                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-                                                    <a href="@Url.Action("ChiTietSanPham", "Home")" title="Laptop Asus">
-                                                        <img src="~/img/laptop01.jpg">
-                                                    </a>
-                                                    <div class="variants pro-action-btn form-nut-grid">
-                                                        <div>
-                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
-                                                                Mua Ngay
-                                                            </a>
-                                                            <a href="@Url.Action("ChiTietSanPham", "Home")" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="product-info">
-                                                    <h3 class="product-name">Laptop Asus</h3>
-                                                    <div class="product-price text-center" style="display:block;">13,500,000₫</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-                                                    <a href="@Url.Action("ChiTietSanPham", "Home")" title="Laptop Asus">
-                                                        <img src="~/img/laptop01.jpg">
-                                                    </a>
-                                                    <div class="variants pro-action-btn form-nut-grid">
-                                                        <div>
-                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
-                                                                Mua Ngay
-                                                            </a>
-                                                            <a href="@Url.Action("ChiTietSanPham", "Home")" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="product-info">
-                                                    <h3 class="product-name">Laptop Asus</h3>
-                                                    <div class="product-price text-center" style="display:block;">13,500,000₫</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-                                                    <a href="@Url.Action("ChiTietSanPham", "Home")" title="Laptop Asus">
-                                                        <img src="~/img/laptop01.jpg">
-                                                    </a>
-                                                    <div class="variants pro-action-btn form-nut-grid">
-                                                        <div>
-                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
-                                                                Mua Ngay
-                                                            </a>
-                                                            <a href="@Url.Action("ChiTietSanPham", "Home")" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="product-info">
-                                                    <h3 class="product-name">Laptop Asus</h3>
-                                                    <div class="product-price text-center" style="display:block;">13,500,000₫</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-                                                    <a href="@Url.Action("ChiTietSanPham", "Home")" title="Laptop Asus">
-                                                        <img src="~/img/laptop01.jpg">
-                                                    </a>
-                                                    <div class="variants pro-action-btn form-nut-grid">
-                                                        <div>
-                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
-                                                                Mua Ngay
-                                                            </a>
-                                                            <a href="@Url.Action("ChiTietSanPham", "Home")" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="product-info">
-                                                    <h3 class="product-name">Laptop Asus</h3>
-                                                    <div class="product-price text-center" style="display:block;">13,500,000₫</div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        }
 
                                     </div>
                                 </section>
@@ -245,175 +130,6 @@
                         </div>
                     </div>
                     <!-- end NEW -->
-
-                    <!-- ON SALE -->
-                    <div id="tab-2" class="tab-content current">
-
-                        <div class="module-product">
-
-                            <div class="category-products">
-                                <section class="products-view products-view-grid">
-                                    <div class="row">
-
-                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-                                                    <a href="@Url.Action("ChiTietSanPham", "Home")" title="Laptop Asus">
-                                                        <img src="~/img/laptop01.jpg">
-                                                    </a>
-                                                    <div class="variants pro-action-btn form-nut-grid">
-                                                        <div>
-                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
-                                                                Mua Ngay
-                                                            </a>
-                                                            <a href="@Url.Action("ChiTietSanPham", "Home")" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="product-info">
-                                                    <h3 class="product-name">Laptop Asus</h3>
-                                                    <div class="product-price">13,500,000₫</div>
-                                                    <div class="product-price-old">
-                                                        14,750,000₫
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        < <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-                                                    <a href="@Url.Action("ChiTietSanPham", "Home")" title="Laptop Asus">
-                                                        <img src="~/img/laptop01.jpg">
-                                                    </a>
-                                                    <div class="variants pro-action-btn form-nut-grid">
-                                                        <div>
-                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
-                                                                Mua Ngay
-                                                            </a>
-                                                            <a href="@Url.Action("ChiTietSanPham", "Home")" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="product-info">
-                                                    <h3 class="product-name">Laptop Asus</h3>
-                                                    <div class="product-price">13,500,000₫</div>
-                                                    <div class="product-price-old">
-                                                        14,750,000₫
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-                                                    <a href="@Url.Action("ChiTietSanPham", "Home")" title="Laptop Asus">
-                                                        <img src="~/img/laptop01.jpg">
-                                                    </a>
-                                                    <div class="variants pro-action-btn form-nut-grid">
-                                                        <div>
-                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
-                                                                Mua Ngay
-                                                            </a>
-                                                            <a href="@Url.Action("ChiTietSanPham", "Home")" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="product-info">
-                                                    <h3 class="product-name">Laptop Asus</h3>
-                                                    <div class="product-price">13,500,000₫</div>
-                                                    <div class="product-price-old">
-                                                        14,750,000₫
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-                                                    <a href="@Url.Action("ChiTietSanPham", "Home")" title="Laptop Asus">
-                                                        <img src="~/img/laptop01.jpg">
-                                                    </a>
-                                                    <div class="variants pro-action-btn form-nut-grid">
-                                                        <div>
-                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
-                                                                Mua Ngay
-                                                            </a>
-                                                            <a href="@Url.Action("ChiTietSanPham", "Home")" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="product-info">
-                                                    <h3 class="product-name">Laptop Asus</h3>
-                                                    <div class="product-price">13,500,000₫</div>
-                                                    <div class="product-price-old">
-                                                        14,750,000₫
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-                                                    <a href="@Url.Action("ChiTietSanPham", "Home")" title="Laptop Asus">
-                                                        <img src="~/img/laptop01.jpg">
-                                                    </a>
-                                                    <div class="variants pro-action-btn form-nut-grid">
-                                                        <div>
-                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
-                                                                Mua Ngay
-                                                            </a>
-                                                            <a href="@Url.Action("ChiTietSanPham", "Home")" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="product-info">
-                                                    <h3 class="product-name">Laptop Asus</h3>
-                                                    <div class="product-price">13,500,000₫</div>
-                                                    <div class="product-price-old">
-                                                        14,750,000₫
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-                                                    <a href="@Url.Action("ChiTietSanPham", "Home")" title="Laptop Asus">
-                                                        <img src="~/img/laptop01.jpg">
-                                                    </a>
-                                                    <div class="variants pro-action-btn form-nut-grid">
-                                                        <div>
-                                                            <a onclick="return giohang(56);" class="btn-cart btn btn-style  left-to">
-                                                                Mua Ngay
-                                                            </a>
-                                                            <a href="@Url.Action("ChiTietSanPham", "Home")" data-handle="" class="btn-view btn btn-style  right-to quick-view">Xem chi tiết</a><br>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="product-info">
-                                                    <h3 class="product-name">Laptop Asus</h3>
-                                                    <div class="product-price">13,500,000₫</div>
-                                                    <div class="product-price-old">
-                                                        14,750,000₫
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </section>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End SALE-->
 
                     <div class="panel-footer">
                         <div class="row">
@@ -446,110 +162,16 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- end san pham cung loai -->
             </section>
             <!-- danh muc san pham -->
-            <section class="sidebar left-content col-lg-3 col-md-3 col-sm-12 col-xs-12 float-left no-padding-left">
-                <div class="aside-right">
-                    <div class="aside hidden-sm hidden-xs">
-                        <!-- danh muc -->
-                        <div class="aside aside-mini-products-list">
-                            <div class="aside-title">
-                                <h3>Danh mục sản phẩm </h3>
-                            </div>
-                            <div class="aside-content mini-products-list">
-                                <div class='cssmenu-flyout'>
-                                    <ul>
-                                        <li>
-                                            <a href=""><span>Laptop Dell </span></a>
-                                            <div class="menu-sub-fly">
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href=""><span>Laptop Dell </span></a>
-                                            <div class="menu-sub-fly">
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href=""><span>Laptop Dell </span></a>
-                                            <div class="menu-sub-fly">
-
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href=""><span>Laptop Dell </span></a>
-                                            <div class="menu-sub-fly">
-
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href=""><span>Laptop Dell </span></a>
-                                            <div class="menu-sub-fly">
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href=""><span>Laptop Dell </span></a>
-                                            <div class="menu-sub-fly">
-
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href=""><span>Laptop Dell </span></a>
-                                            <div class="menu-sub-fly">
-
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href=""><span>Laptop Dell </span></a>
-                                            <div class="menu-sub-fly">
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end danh muc -->
-                    </div>
-                    <div class="aside hidden-sm hidden-xs">
-                        <!-- danh muc -->
-                        <div class="aside aside-mini-products-list">
-                            <div class="aside-title">
-                                <h3>Các loại laptop</h3>
-                            </div>
-                            <div class="aside-content mini-products-list">
-                                <div class='cssmenu-flyout'>
-                                    <ul>
-                                        <li>
-                                            <a href="san-pham/scan-tai-lieu-chuyen-dung-p93.html"><span>Laptop Gaming </span></a>
-                                            <div class="menu-sub-fly">
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <a href="san-pham/may-scan-a4-p36.html"><span>Laptop van phong </span></a>
-                                            <div class="menu-sub-fly">
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="san-pham/may-scan-ho-chieu-p30.html"><span>Laptop doanh nhan </span></a>
-                                            <div class="menu-sub-fly">
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="san-pham/may-scan-chim-p29.html"><span>Laptop lam viec </span></a>
-                                            <div class="menu-sub-fly">
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end danh muc -->
-                    </div>
-                    <!-- danh sach tin tuc -->
-            </section>
+            @{ Html.RenderPartial("Sidebar");}
         </div>
     </div>
 </section>
 <!--end:body-->
+<script type="text/javascript>
+    //var x = document.getElementById(" price01").value;
+    //x.value = =Convert.ToDecimal(x).ToString("#,##0.00");
+
+</script>

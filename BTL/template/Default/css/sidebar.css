@@ -259,17 +259,6 @@
 .aside.aside-mini-products-list .aside-title{
 	margin-bottom: 0;
 }
-.aside.aside-mini-products-list .aside-title h3{
-	line-height: 50px;
-    color: #e03232;
-    font-weight: bold;
-    padding: 5px 10px;
-    text-transform: uppercase;
-    background: #f1f1f1;
-    border-width: 1px 1px 1px 5px;
-    border-style: solid;
-    border-color: #eee #eee #eee #e03232;
-}
 
 @media(max-width: 480px){
 	.section-deal .aside.aside-mini-products-list .aside-title h3:after{
